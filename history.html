@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, 
+initial-scale=1.0">
+<meta charset="UTF-8">
+   
+    <script>
+        async function OnClickSubmit (test){
+            let url = "https://api.artic.edu/api/v1/artworks/search?query[date][1899]=true&limit=2&fields=id,title,image_id/full/843,/0/default.jpg"
+            let response = await fetch(url)
+            let artData = await response.json();
+            writeToPage(artData);
+        }
+        function writeToPage(result){
+            let info= <div>${image_id}</div>
+            document.getElementById('image').innerHTML= info
+        }
+    </script>
+</head>
+<body>
+    <a href="" onclick="OnClickSubmit:(test)">Get Art</a>
+    <div id='image'></div>
+</body>
+</html>
