@@ -4,22 +4,80 @@
 <meta name="viewport" content="width=device-width, 
 initial-scale=1.0">
 <meta charset="UTF-8">
-   
-    <script>
-        async function OnClickSubmit (test){
-            let url = "https://api.artic.edu/api/v1/artworks/search?query[date][1899]=true&limit=2&fields=id,title,image_id/full/843,/0/default.jpg"
+        <script> 
+        async function OnClickAncient(){
+            // Use the time to pick a number from 0 to 19, and skip that many artworks
+            let skip = Date.now() % 20
+            // Filters: made after 5000 bc and before 1 AD, public domain, has an image, return 1 artwork
+            let url = 'https://openaccess-api.clevelandart.org/api/artworks/?created_after=-5000&created_before=100&cc0&has_image=1&limit=1&skip=' + skip
             let response = await fetch(url)
             let artData = await response.json();
             writeToPage(artData);
         }
+         async function OnClickMedieval(){
+            // Use the time to pick a number from 0 to 19, and skip that many artworks
+            let skip = Date.now() % 20
+            // Filters: made after 100 AD and before 1400AD, public domain, has an image, return 1 artwork
+            let url = 'https://openaccess-api.clevelandart.org/api/artworks/?created_after=100&created_before=1400&cc0&has_image=1&limit=1&skip=' + skip
+            let response = await fetch(url)
+            let artData = await response.json();
+            writeToPage(artData);
+        }
+        async function OnClickEarlyModern(){
+            // Use the time to pick a number from 0 to 19, and skip that many artworks
+            let skip = Date.now() % 20
+            // Filters: made after 1400 AD and before 1800 AD, public domain, has an image, return 1 artwork
+            let url = 'https://openaccess-api.clevelandart.org/api/artworks/?created_after=1400&created_before=1800&cc0&has_image=1&limit=1&skip=' + skip
+            let response = await fetch(url)
+            let artData = await response.json();
+            writeToPage(artData);
+        }
+        async function OnClickModern(){
+            // Use the time to pick a number from 0 to 19, and skip that many artworks
+            let skip = Date.now() % 20
+            // Filters: made after 1800, public domain, has an image, return 1 artwork
+            let url = 'https://openaccess-api.clevelandart.org/api/artworks/?created_after=1800&created_before=2026&cc0&has_image=1&limit=1&skip=' + skip
+            let response = await fetch(url)
+            let artData = await response.json();
+            writeToPage(artData);
+        }
+        
         function writeToPage(result){
-            let info= <div>${image_id}</div>
+            let art = result.data[0]
+            if (art.creators.description == null) {
+            let info = `<div>
+                <img src="${art.images.web.url}" style="max-width:100%">
+                <h2>${art.title}</h2>
+                <p>Unknown</p>
+                <p>${art.creation_date}</p> 
+            </div>` 
+            document.getElementById('image').innerHTML= info  
+                } else {
+            let info = `<div>
+                <img src="${art.images.web.url}" style="max-width:100%">
+                <h2>${art.title}</h2>
+                <p>${art.creators[0].description}</p>
+                <p>${art.creation_date}</p>
+            </div>`
             document.getElementById('image').innerHTML= info
+        }
+            
         }
     </script>
 </head>
 <body>
-    <a href="" onclick="OnClickSubmit:(test)">Get Art</a>
+    <div>
+        <a href="#" onclick="OnClickAncient()">Ancient Art</a>
+    </div>
+    <div>
+        <a href="#" onclick="OnClickMedieval()">Medieval Art</a>
+    </div>
+    <div>
+        <a href="#" onclick="OnClickEarlyModern ()">Early Modern Art</a>
+    </div>
+    <div>
+        <a href="#" onclick="OnClickModern()">Art 1800-Today</a>
+    </div>
     <div id='image'></div>
 </body>
 </html>
