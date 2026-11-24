@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>MS Paint Dupe</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<nav class="navbar">
+		<ul class="nav-links">
+			<li><a href="index.html">Home</a></li>
+			<li class="dropdown">
+				<a href="pages/forkids.html">For Kids</a>
+				<ul class="dropdown-menu">
+					<li><a href="paintpage2.html">Paint</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="pages/forparents.html">For Parents</a>
+				<ul class="dropdown-menu">
+					<li><a href="pages/parentselementary.html">Elementary School</a></li>
+					<li><a href="pages/parentsmiddle.html">Middle School</a></li>
+					<li><a href="pages/parentshigh.html">High School</a></li>
+					<li><a href="FAQ.html">FAQ</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a href="pages/foreducators.html">For Educators</a>
+				<ul class="dropdown-menu">
+					<li><a href="pages/educatorselementary.html">Elementary School</a></li>
+					<li><a href="pages/educatorsmiddle.html">Middle School</a></li>
+					<li><a href="pages/educatorshigh.html">High School</a></li>
+				</ul>
+			</li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+	</nav>
+    <h1 class="paint-title">Paint!</h1>
+	<div class="paint-clone">
+		<canvas id="canvas"></canvas>
+		<div class="paint-tools">
+			<input type="range"
+				id="brush-size" min="1"
+				max="50" value="5">
+			<input type="color"
+				id="color-picker">
+			<button id="pen">
+				Pen
+			</button>
+			<button id="clear-canvas">
+				Clear
+			</button>
+		</div>
+	</div>
+	<script >
+// Set up canvas and context
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const brushSize =
+	            document.getElementById('brush-size');
+        const colorPicker =
+	            document.getElementById('color-picker');
+        const clearCanvas =
+	            document.getElementById('clear-canvas');
+
+        let isDrawing = false;
+
+// Set canvas dimensions and initial settings
+        canvas.width =
+	        window.innerWidth - 40;
+        canvas.height =
+	        window.innerHeight * 0.85;
+        ctx.lineWidth = 5;
+        ctx.lineCap = 'round';
+        ctx.strokeStyle = 'black';
+
+// Start and stop drawing functions
+        function startPosition(e) {
+	        isDrawing = true;
+	            draw(e);
+}
+        function endPosition() {
+	        isDrawing = false;
+	            ctx.beginPath();
+}
+function draw(e) {
+	if (!isDrawing) return;
+	ctx.strokeStyle =
+		colorPicker.value; 
+		//pick the color
+	ctx.lineWidth =
+		brushSize.value; 
+		//Select the brush size
+	ctx.lineTo(
+		e.clientX - canvas.offsetLeft,
+		e.clientY - canvas.offsetTop
+	);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(
+		e.clientX - canvas.offsetLeft,
+		e.clientY - canvas.offsetTop
+	);
+}
+
+//Event listeners for mouse events
+canvas.addEventListener('mousedown', startPosition);
+canvas.addEventListener('mouseup', endPosition);
+canvas.addEventListener('mousemove', draw);
+
+// Clear canvas function
+clearCanvas.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+</script>
+</body>
+
+</html>
