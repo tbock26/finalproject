@@ -14,6 +14,7 @@ body { font-family: sans-serif; }
   position: sticky;
   top: 0;
   z-index: 20;
+  width: 100%;
   height: 60px;
   padding: 0 24px;
   display: flex;
