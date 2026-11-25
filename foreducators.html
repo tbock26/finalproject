@@ -3,20 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
   <title>For Educators | Open Studios</title>
 </head>
 <body>
+<div class="page-container">
+
+<nav class="navbar">
+  <ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+
+<!--for kids dropdown menu-->
+    <li class="dropdown">
+        <a href="forkids.html">For Kids</a>
+        <ul class="dropdown-menu">
+            <li><a href="history.html">History</a></li>
+            <li><a href="paintpage2.html">Paint</a></li>
+        </ul>
+    </li>
+
+<!--for parents dropdown menu-->
+    <li class="dropdown">
+      <a href="forparents.html">For Parents</a>
+      <ul class="dropdown-menu">
+        <li><a href="athome.html">At Home Activities</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+      </ul>
+    </li>
+
+<!--for educators dropdown menu-->
+    <li class="dropdown">
+      <a href="foreducators.html">For Educators</a>
+      <ul class="dropdown-menu">
+        <li><a href="foreducators.html">Lesson Plans</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
   <h1>Lesson Plans for Educators</h1>
   <p>By Elisa Tilley</p>
 
-  
+  <!-- Grade-level buttons -->
   <div id="age-buttons">
     <button onclick="showLesson('lesson-elementary')">Elementary School</button>
     <button onclick="showLesson('lesson-middle')">Middle School</button>
     <button onclick="showLesson('lesson-high')">High School</button>
   </div>
 
- 
+  <!-- Elementary School -->
   <section id="lesson-elementary" class="lesson" hidden>
     <h2>Elementary School</h2>
     <ul>
@@ -24,101 +61,106 @@
       <li>Step 2: Have students create their own artwork using the identified concepts </li>
       <li>Step 3: Encourage students to share their artwork and discuss the concepts they used </li>
     </ul>
+
     <h3>Activity: The Red Armchair</h3>
-<p>
-  Look closely at this painting by Pablo Picasso, <em>The Red Armchair</em>. It is a cubist painting, which means it shows the subject from multiple angles at the same time. In this case, Picasso painted the woman's face from the front and from the side at the same time.
-  <figure>
-  <img src="images/red-armchair.jpg"
-       alt="Cubist painting of a woman in a red armchair, in bright yellow, green, and purple colors."
-       width="400">
-  <figcaption>
-    Pablo Picasso, <em>The Red Armchair</em>, 1931. Art Institute of Chicago.
-    &copy; 2018 Estate of Pablo Picasso / Artists Rights Society (ARS), New York.
-    Image courtesy of the Art Institute of Chicago.
-  </figcaption>
-</figure>
- 
-</p>
-<ul>
-  <li>View the painting together and look quietly for one minute.</li>
-  <li>Ask: What colors do you see? What shapes can you find?</li>
-  <li>Ask: Can you find the face seen from the front and from the side?</li>
-  <li>Have students draw a portrait of a friend using bright colors, showing both views of the face.</li>
-</ul>
+    <p>
+      Look closely at this painting by Pablo Picasso, <em>The Red Armchair</em>. It is a cubist painting, which means it shows the subject from multiple angles at the same time. In this case, Picasso painted the woman's face from the front and from the side at the same time.
+    </p>
+
+    <figure>
+      <img src="images/red-armchair.jpg"
+           alt="Cubist painting of a woman in a red armchair, in bright yellow, green, and purple colors."
+           width="400">
+      <figcaption>
+        Pablo Picasso, <em>The Red Armchair</em>, 1931. Art Institute of Chicago.
+        &copy; 2018 Estate of Pablo Picasso / Artists Rights Society (ARS), New York.
+        Image courtesy of the Art Institute of Chicago.
+      </figcaption>
+    </figure>
+
+    <ul>
+      <li>View the painting together and look quietly for one minute.</li>
+      <li>Ask: What colors do you see? What shapes can you find?</li>
+      <li>Ask: Can you find the face seen from the front and from the side?</li>
+      <li>Have students draw a portrait of a friend using bright colors, showing both views of the face.</li>
+    </ul>
   </section>
 
+  <!-- Middle School -->
   <section id="lesson-middle" class="lesson" hidden>
     <h2>Middle School</h2>
     <ul>
-      <li>Step 1: Revist the basic core concepts (lines, shapes, colors, etc), while deepening understanding of design concepts like balance, contrast, and composition. </li>
-      <li>Step 2: Help students identify different mediums (watercolor, acrylic, charcoal, etc.) and techniques (scultpure, collage, painting, etc.) by analyzing existing artworks. </li>
+      <li>Step 1: Revisit the basic core concepts (lines, shapes, colors, etc.), while deepening understanding of design concepts like balance, contrast, and composition. </li>
+      <li>Step 2: Help students identify different mediums (watercolor, acrylic, charcoal, etc.) and techniques (sculpture, collage, painting, etc.) by analyzing existing artworks. </li>
       <li>Step 3: Encourage students to create their own artwork using the identified concepts and techniques. </li>
     </ul>
 
-   <h3>Activity: The Return of Odysseus</h3>
-<p>
-  Look closely at this collage by Romare Bearden (1977). Bearden made it from cut and
-  pasted papers. It retells a scene from Homer's <em>Odyssey</em>, an ancient Greek epic
-  poem, and it was inspired by an Italian Renaissance fresco and by the art of Benin.
-</p>
+    <h3>Activity: The Return of Odysseus</h3>
+    <p>
+      Look closely at this collage by Romare Bearden (1977). Bearden made it from cut and
+      pasted papers. It retells a scene from Homer's <em>Odyssey</em>, an ancient Greek epic
+      poem, and it was inspired by an Italian Renaissance fresco and by the art of Benin.
+    </p>
 
-<figure>
-  <img src="images/return-of-odysseus.jpg"
-       alt="Cool-toned paper collage of several Black figures in a room."
-       width="500">
-  <figcaption>
-    Romare Bearden, <em>The Return of Odysseus (Homage to Pinturicchio and Benin)</em>, 1977.
-    Art Institute of Chicago, Mary and Leigh Block Fund.
-    &copy; Romare Bearden Foundation / Licensed by VAGA at Artists Rights Society (ARS), NY.
-  </figcaption>
-</figure>
+    <figure>
+      <img src="images/return-of-odysseus.jpg"
+           alt="Cool-toned paper collage of several Black figures in a room."
+           width="500">
+      <figcaption>
+        Romare Bearden, <em>The Return of Odysseus (Homage to Pinturicchio and Benin)</em>, 1977.
+        Art Institute of Chicago, Mary and Leigh Block Fund.
+        &copy; Romare Bearden Foundation / Licensed by VAGA at Artists Rights Society (ARS), NY.
+      </figcaption>
+    </figure>
 
-<ul>
-  <li>Read a short summary of the Odyssey together, or ask students to share what they already know.</li>
-  <li>Look at the collage for two minutes. Ask: Who do you think the central figures are? What elements and materials make up the collage?</li>
-  <li>Discuss: Why might an artist retell an ancient story using different faces and settings?</li>
-  <li>Have students pick a story they know well and make a paper collage that retells one scene in a new setting.</li>
-</ul>
+    <ul>
+      <li>Read a short summary of the Odyssey together, or ask students to share what they already know.</li>
+      <li>Look at the collage for two minutes. Ask: Who do you think the central figures are? What elements and materials make up the collage?</li>
+      <li>Discuss: Why might an artist retell an ancient story using different faces and settings?</li>
+      <li>Have students pick a story they know well and make a paper collage that retells one scene in a new setting.</li>
+    </ul>
   </section>
 
+  <!-- High School -->
   <section id="lesson-high" class="lesson" hidden>
     <h2>High School</h2>
     <ul>
-   <li>Step 1: Build on core design concepts (balance, contrast, composition) by studying how artists from different periods and movements, such as Impressionism, Cubism, or Surrealism, use them to express ideas. </li>
-<li>Step 2: Guide students in analyzing existing artworks through a critical lens, considering the artist's medium, technique, historical context, and intended message, and supporting their interpretations with evidence. </li>
-<li>Step 3: Challenge students to create an original artwork inspired by an artist or movement they studied, and write a short artist statement explaining the choices they made. </li>
+      <li>Step 1: Build on core design concepts (balance, contrast, composition) by studying how artists from different periods and movements, such as Impressionism, Cubism, or Surrealism, use them to express ideas. </li>
+      <li>Step 2: Guide students in analyzing existing artworks through a critical lens, considering the artist's medium, technique, historical context, and intended message, and supporting their interpretations with evidence. </li>
+      <li>Step 3: Challenge students to create an original artwork inspired by an artist or movement they studied, and write a short artist statement explaining the choices they made. </li>
     </ul>
 
     <h3>Activity: American Gothic</h3>
-<p>
-  Grant Wood painted <em>American Gothic</em> in 1930. Viewers have long debated whether
-  it is a satire of rural life or a tribute to it, which makes it a good painting for
-  practicing interpretation.
-</p>
+    <p>
+      Grant Wood painted <em>American Gothic</em> in 1930. Viewers have long debated whether
+      it is a satire of rural life or a tribute to it, which makes it a good painting for
+      practicing interpretation.
+    </p>
 
-<figure>
-  <img src="images/american-gothic.jpg"
-       alt="Painting of a stern farmer holding a pitchfork beside a woman, standing in front of a white farmhouse with a pointed Gothic window."
-       width="400">
-  <figcaption>
-    Grant Wood, <em>American Gothic</em>, 1930.
-    Art Institute of Chicago, Friends of American Art Collection.
-  </figcaption>
-</figure>
+    <figure>
+      <img src="images/american-gothic.jpg"
+           alt="Painting of a stern farmer holding a pitchfork beside a woman, standing in front of a white farmhouse with a pointed Gothic window."
+           width="400">
+      <figcaption>
+        Grant Wood, <em>American Gothic</em>, 1930.
+        Art Institute of Chicago, Friends of American Art Collection.
+        <!-- If the museum's page shows a copyright line, add it here -->
+      </figcaption>
+    </figure>
 
-<ul>
-  <li>Step 1: Move beyond describing what an artwork looks like to analyzing how design choices such as composition, contrast, and symbolism create meaning, and how the artist's historical context shapes those choices. </li>
-  <li>Step 2: Encourage students to form their own interpretation of a work, support it with visual evidence, and respectfully weigh it against other readings, such as satire versus tribute. </li>
-  <li>Step 3: Have students create an original work that expresses a personal perspective or identity, using the media and techniques they have studied, and write a short artist statement explaining their choices. </li>
-</ul>
+    <ul>
+      <li>Step 1: Move beyond describing what an artwork looks like to analyzing how design choices such as composition, contrast, and symbolism create meaning, and how the artist's historical context shapes those choices. </li>
+      <li>Step 2: Encourage students to form their own interpretation of a work, support it with visual evidence, and respectfully weigh it against other readings, such as satire versus tribute. </li>
+      <li>Step 3: Have students create an original work that expresses a personal perspective or identity, using the media and techniques they have studied, and write a short artist statement explaining their choices. </li>
+    </ul>
   </section>
 
   <p><a href="athome.html">For more ideas, see at-home activities</a></p>
 
-  
+</div>
 
   <script>
-  
+    // Hide every lesson, then show only the one for the button that was clicked
     function showLesson(id) {
       const lessons = document.querySelectorAll('.lesson');
       lessons.forEach(function (lesson) {
@@ -126,8 +168,6 @@
       });
       document.getElementById(id).hidden = false;
     }
-
-    
   </script>
 </body>
 </html>
