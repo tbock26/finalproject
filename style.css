@@ -118,6 +118,39 @@ body { font-family: sans-serif; }
   line-height: 1.6;
 }
 
+/* about page styles */
+.about-title {
+  margin-top: 30px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 20px 30px;
+}
+
+.about-container section {
+  display: grid;
+  gap: 0;
+}
+
+.about-container h2 {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: #388388;
+  color: #F4A261;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.about-container p {
+  padding: 16px 20px;
+  background: #fff;
+  color: #264653;
+  line-height: 1.6;
+}
+
 /* paint page styles */
 h1 {
   margin-bottom: 15px;
