@@ -235,3 +235,42 @@ canvas {
     margin: 8px auto 0;
     font-size: 14px;
   }
+
+/* quiz styles */
+
+body { 
+  font-family: sans-serif; 
+  display: flex; 
+  justify-content: center; 
+  padding-top: 50px; }
+
+.quiz-container { 
+  width: 400px; 
+  padding: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; }
+
+.btn-grid { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+  margin: 20px 0; }
+
+button { 
+  padding: 10px; 
+  font-size: 16px; 
+  cursor: pointer; }
+
+button:disabled { 
+  cursor: not-allowed; }
+
+.correct { 
+  background-color: #4caf50; 
+  color: white; }
+
+.wrong { 
+  background-color: #f44336; 
+  color: white; }
+
+.hide { 
+  display: none; }
