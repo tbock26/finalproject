@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head> 
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>parentfaq</title>
+        </head>
+<body>
+   
+   <div class="page-container">
+<nav class="navbar">
+  <ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+    
+
+<!--for kids dropdown menu-->
+    <li class="dropdown">
+        <a href="pages/forkids.html">For Kids</a>
+        <ul class="dropdown-menu">
+            <li><a href="pages/history.html">History</a></li>
+            <li><a href="paintpage2.html">Paint</a></li>
+        </ul>
+    </li>
+
+<!--for parents dropdown menu-->
+    <li class="dropdown">
+      <a href="pages/forparents.html">For Parents</a>
+      <ul class="dropdown-menu">
+        <li><a href="pages/athome.html">At Home Activities</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+      </ul>
+    </li>
+
+<!--for educators dropdown menu-->
+    <li class="dropdown">
+      <a href="pages/foreducators.html">For Educators</a>
+      <ul class="dropdown-menu">
+        <li><a href="foreducators.html">Lesson Plans</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+    <h1>At-Home Activities</h1>
+   
+    <nav>
+    <button id= "elementarybutton" onclick="elementary()">Elementary School</button>
+    <button id= "middlebutton" onclick="middle()">Middle School</button>
+    <button id= "highbutton" onclick="high()">High School</button>
+    </nav>
+
+    <div id="activity"><p>For more activities, see <a href="foreducators.html">Lesson Plans for Educators</a>.</p></div>
+  
+  <script>
+
+        function elementary() {
+          document.getElementById("activity").innerHTML = `
+          <h2 class = "header2">Elementary School (Ages 5-11)</h2>
+Goal 1: Help kids to collect found materials and organize them or modify them with traditional art materials. <br>
+Goal 2: Create a project that plays with composition and texture using found materials and paint. <br>
+Goal 3: Encourage kids to see found materials as a tool for artistry and fun!
+
+<h2 class = "header2">Activity (Inspired by Robert Motherwell)</h2>
+<img class="center-img" src="images/motherwell.jpg" alt="Brown, white, and black collage of found and painted materials by artist Robert Motherwell">
+
+<ol>
+  <li>Source collage materials. For this project, you’ll want more solid colors, but you can mix in patterns as well! 
+    The inspiration image uses paper bags and letters, which you can add in as well. </li>
+  <li>You also have the opportunity to let your kid make some of their own materials! You can lay out paint or pens 
+    which they can use on paper, and then allow them to cut that up as part of the collage as well. Have them try 
+    adding some written components!</li>
+  <li>Once you have your materials, begin playing with composition. Encourage your kid to mix and match colors and 
+    create interesting shapes.</li>
+    <li>Once the collage is arranged, you or your kid can glue it down. Now you have your very own Motherwell!</li>
+</ol>`};
+
+        function middle() {
+            document.getElementById("activity").innerHTML = `
+            <h2 class = "header2">Middle School (Ages 12-13)</h2>
+
+Goal 1: Encourage kids to find patterns in the collage materials they use, and to organize the material accordingly. <br>
+Goal 2: Create a project based on these gropued objects, learning to play with subject matter and composition. <br>
+Goal 3: Encourage sharing! How does this project show your unique point of view? 
+
+<h2 class = "header2">Activity (Inspired by Harry Callahan)</h2>
+<img class="center-img" src="images/callahan.jpg" alt="Black and white collage of faces by artist Harry Callahan">
+
+<ol>
+  <li>Source collage materials. The best materials for this project will come from magazines, newspapers, or old 
+    illustrated books. </li>
+  <li>Pick a subject that you will create a collage around. For this collage, you will use many images of the same 
+    type of object. Callahan uses faces in the example above, which is a great jumping off point, but you can use 
+    anything! Flowers, foods, similar colors, etc.</li>
+  <li>Cut out the selected subject matter from your collage materials and begin to arrange them on a page. Play with 
+    different compositions: How does it look if you can’t see any of the page? How does it look with negative space? 
+    Can you make the collage in the shape of the subject matter (i.e. a face out of faces; a bouquet out of flowers)?</li>
+    <li>Once you have an arrangement that you like, start gluing them down! Now you’ve made a thematic collage!</li>
+</ol>`
+        };
+
+        function high() {
+            document.getElementById("activity").innerHTML = `
+    <h2 class = "header2">High School (Ages 14-18)</h2>
+Goal 1: Level up kids' traditional perspective on art by using found materials and construction to play with dimensionality. <br>
+Goal 2: Encourage innovation with both subject and format. How can you alter the canvas along with the painting? <br>
+Goal 3: Gain confidence in developing artistic skills and voice. Aim to really let your viewpoint shine! 
+
+<h2 class = "header2">Activity (Inspired by Robert Rauschenberg)</h2>
+<img class="center-img" src="images/rauschenberg.jpg" alt="Constructed and collaged artwork with small cubbies, pastel sketches, and found materials by artist Robert Rauschenberg">
+
+<ol>
+  <li>To begin, you’ll want to consider the base of the project. Rauschenberg’s surfaces usually have little cubbies, 
+    drawers, drapes, or otherwise three-dimensional elements that will create a more engaging final product. Your kid 
+    can either construct this out of cardboard, or you can purchase a wood panel, various wood elements, and wood glue 
+    from your local craft store to get started. We have also linked ways to purchase these items online.  </li>
+  <li>Once you have constructed your surface, begin gathering other materials. These can include things like paints and
+     pastels, collage materials, along with fabric, bubble wrap, and other textured materials. </li>
+  <li>Begin creating! You can start by laying out materials loosely. How can you create a window, as Rauschenberg 
+    does in his piece? What is outside the window? What belongs within the various compartments on your surface, and 
+    what is immediately visible to the viewer? What color scheme might you want to work within: dark and gloomy, or 
+    bright and welcoming? </li>
+    <li>Once you are happy with the layout, begin gluing things down and painting on the canvas. As you go, you might 
+        get more inspiration. Feel free to keep layering — placing and gluing, then noticing a new area and placing and
+         gluing until the project feels complete. Trust your instincts!</li>
+</ol>`        
+        };
+    </script>
+
+</div>
+</body>
