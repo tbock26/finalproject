@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head> 
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>parentfaq</title>
+        </head>
+<body>
+     <div class="page-container">
+<nav class="navbar">
+  <ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+    
+
+<!--for kids dropdown menu-->
+    <li class="dropdown">
+        <a href="forkids.html">For Kids</a>
+        <ul class="dropdown-menu">
+            <li><a href="history.html">History</a></li>
+            <li><a href="paintpage2.html">Paint</a></li>
+        </ul>
+    </li>
+
+<!--for parents dropdown menu-->
+    <li class="dropdown">
+      <a href="forparents.html">For Parents</a>
+      <ul class="dropdown-menu">
+        <li><a href="athome.html">At Home Activities</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+      </ul>
+    </li>
+
+<!--for educators dropdown menu-->
+    <li class="dropdown">
+      <a href="foreducators.html">For Educators</a>
+      <ul class="dropdown-menu">
+        <li><a href="foreducators.html">Lesson Plans</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<header>
+<h1 class="header1">Frequently Asked Questions</h1>
+</header>
+
+<main class="faq-container">
+		<section>
+<h2 class="header2">I don’t have an arts background. Where’s a good place to start teaching my kid about art? </h2>
+        <p class="p"><ul>
+            <li>Open Studios’ online program is an excellent hands-off way of getting your kid started 
+                with arts education. We recommend beginning with either creating your own artwork on 
+                our painting page, or learning about historical paintings on our art history page. Once 
+                your kid does these, there’s a quiz that they can work on to test their skills. We also 
+                recommend doing these lessons with your kid! Learning about art together is a great way 
+                to connect, and you may learn a thing or two yourself. </li>
+        </ul></p>
+
+<h2 class="header2">I’m worried about my kid’s screen time. Do you have recommendations for arts learning offline?</h2>
+        <p class="p"><ul>
+            <li>Absolutely! While the starting section of our site is primarily online activities, 
+                you can find in-class and at-home activities on our website as well. This allows 
+                your student to engage with some of the artists in our student module by making their 
+                own, hands-on projects offline! </li>
+        </ul></p>
+
+<h2 class="header2">How do you source the images from your site? Where can we see them in real life? </h2>
+       <p class="p"> <ul>
+            <li>We have used images from the Art Institute of Chicago’s open source API. All of these 
+                paintings are held in the Art Institute of Chicago’s collection. Many of them may be on 
+                view, but you can check out their website in advance, since some paintings may be in 
+                storage or travelling for other exhibitions. </li>
+        </ul></p>
+
+<h2 class="header2">My kid excels at art! Can we use activities outside of the specified age range?</h2>
+        <p class="p"><ul>
+            <li>You can definitely level up! Since our activities are designed around artists and their 
+                techniques, there is something to be gained from doing any level of project. You can 
+                definitely encourage your kid to do a higher-level project if they are breezing through 
+                the others. Alternatively, it can be fun for kids to do the same project, but bigger! A 
+                bigger canvas allows them to play with scale and composition in new, interesting ways.  </li>
+        </ul></p>
+
+<h2 class="header2">My kid needs a little more support. Can we use activities for younger students? </h2>
+    <p class="p"><ul>
+        <li>Of course! Our activities are designed for certain age groups, but can easily be modified 
+        according to your child’s needs. If you choose to use an activity for a younger category, 
+        you can easily increase the challenge slightly by creating a more intricate artwork with the 
+        simpler technique. Alternatively, you can use simpler subject matter with more complicated 
+        techniques if that suits your child’s skills better. These activities are great jumping off 
+        points, and can be modified however you need! </li>
+    </ul></p>
+
+<h2 class="header2">Don't see your answer here? Submit your question and someone from our team will get back to you!</h2>
+<textarea id="paragraphBox" type="text" placeholder="Type your question here"></textarea> <br><br>
+<button id= "submit" type="submit">Submit</button>
+
+<p class="p" id="thankYouMessage"></p>
+
+<script>
+const paragraphBox = document.createElement("textarea");
+paragraphBox.rows = 6; 
+paragraphBox.cols = 200; 
+paragraphBox.id = "userParagraph";
+
+const textarea = document.getElementById('paragraphBox');
+const button = document.getElementById("submit");
+const message = document.getElementById("thankYouMessage");
+
+  button.addEventListener('click', () => {
+    textarea.value = '';
+    message.textContent = "Thank you for your submission!"});
+
+
+textarea.addEventListener('click', () => {
+    message.textContent = '';
+});
+  
+    </script>
+    </section>
+	</main>
+    </div>
+    
+</body>
