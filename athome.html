@@ -6,9 +6,8 @@
             <link rel="stylesheet" href="style.css">
             <title>parentfaq</title>
         </head>
-<body>
-   
-   <div class="page-container">
+<body>  
+<div class="page-container">
 <nav class="navbar">
   <ul class="nav-links">
 
@@ -44,7 +43,7 @@
   </ul>
 </nav>
 
-    <h1>At-Home Activities</h1>
+    <h1 class="header1">At-Home Activities</h1>
    
     <nav>
     <button id= "elementarybutton" onclick="elementary()">Elementary School</button>
@@ -52,20 +51,20 @@
     <button id= "highbutton" onclick="high()">High School</button>
     </nav>
 
-    <div id="activity"><p>For more activities, see <a href="foreducators.html">Lesson Plans for Educators</a>.</p></div>
+    <div id="activity"><p class="p">For more activities, see <a href="foreducators.html">Lesson Plans for Educators</a>.</p></div>
   
   <script>
-
         function elementary() {
           document.getElementById("activity").innerHTML = `
           <h2 class = "header2">Elementary School (Ages 5-11)</h2>
-Goal 1: Help kids to collect found materials and organize them or modify them with traditional art materials. <br>
+<p class="p">Goal 1: Help kids to collect found materials and organize them or modify them with traditional art materials. <br>
 Goal 2: Create a project that plays with composition and texture using found materials and paint. <br>
-Goal 3: Encourage kids to see found materials as a tool for artistry and fun!
+Goal 3: Encourage kids to see found materials as a tool for artistry and fun!</p>
 
 <h2 class = "header2">Activity (Inspired by Robert Motherwell)</h2>
 <img class="center-img" src="images/motherwell.jpg" alt="Brown, white, and black collage of found and painted materials by artist Robert Motherwell">
 
+<p class="p">
 <ol>
   <li>Source collage materials. For this project, you’ll want more solid colors, but you can mix in patterns as well! 
     The inspiration image uses paper bags and letters, which you can add in as well. </li>
@@ -75,19 +74,20 @@ Goal 3: Encourage kids to see found materials as a tool for artistry and fun!
   <li>Once you have your materials, begin playing with composition. Encourage your kid to mix and match colors and 
     create interesting shapes.</li>
     <li>Once the collage is arranged, you or your kid can glue it down. Now you have your very own Motherwell!</li>
-</ol>`};
+</ol></p>`};
 
         function middle() {
             document.getElementById("activity").innerHTML = `
             <h2 class = "header2">Middle School (Ages 12-13)</h2>
-
+<p class="p">
 Goal 1: Encourage kids to find patterns in the collage materials they use, and to organize the material accordingly. <br>
 Goal 2: Create a project based on these gropued objects, learning to play with subject matter and composition. <br>
-Goal 3: Encourage sharing! How does this project show your unique point of view? 
+Goal 3: Encourage sharing! How does this project show your unique point of view? </p>
 
 <h2 class = "header2">Activity (Inspired by Harry Callahan)</h2>
 <img class="center-img" src="images/callahan.jpg" alt="Black and white collage of faces by artist Harry Callahan">
 
+<p class="p">
 <ol>
   <li>Source collage materials. The best materials for this project will come from magazines, newspapers, or old 
     illustrated books. </li>
@@ -98,19 +98,20 @@ Goal 3: Encourage sharing! How does this project show your unique point of view?
     different compositions: How does it look if you can’t see any of the page? How does it look with negative space? 
     Can you make the collage in the shape of the subject matter (i.e. a face out of faces; a bouquet out of flowers)?</li>
     <li>Once you have an arrangement that you like, start gluing them down! Now you’ve made a thematic collage!</li>
-</ol>`
+</ol></p>`
         };
 
         function high() {
             document.getElementById("activity").innerHTML = `
     <h2 class = "header2">High School (Ages 14-18)</h2>
-Goal 1: Level up kids' traditional perspective on art by using found materials and construction to play with dimensionality. <br>
+<p class="p">Goal 1: Level up kids' traditional perspective on art by using found materials and construction to play with dimensionality. <br>
 Goal 2: Encourage innovation with both subject and format. How can you alter the canvas along with the painting? <br>
-Goal 3: Gain confidence in developing artistic skills and voice. Aim to really let your viewpoint shine! 
+Goal 3: Gain confidence in developing artistic skills and voice. Aim to really let your viewpoint shine! </p>
 
 <h2 class = "header2">Activity (Inspired by Robert Rauschenberg)</h2>
 <img class="center-img" src="images/rauschenberg.jpg" alt="Constructed and collaged artwork with small cubbies, pastel sketches, and found materials by artist Robert Rauschenberg">
 
+<p class="p">
 <ol>
   <li>To begin, you’ll want to consider the base of the project. Rauschenberg’s surfaces usually have little cubbies, 
     drawers, drapes, or otherwise three-dimensional elements that will create a more engaging final product. Your kid 
@@ -125,7 +126,7 @@ Goal 3: Gain confidence in developing artistic skills and voice. Aim to really l
     <li>Once you are happy with the layout, begin gluing things down and painting on the canvas. As you go, you might 
         get more inspiration. Feel free to keep layering — placing and gluing, then noticing a new area and placing and
          gluing until the project feels complete. Trust your instincts!</li>
-</ol>`        
+</ol></p>`        
         };
     </script>
 
