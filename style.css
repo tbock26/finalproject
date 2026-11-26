@@ -127,6 +127,7 @@ body { font-family: sans-serif; }
   }
 
   .submit-buttons button {
+    justify-content: center;
     padding: 10px 18px;
     background: #388388;
     color: #F4A261;
@@ -140,25 +141,6 @@ body { font-family: sans-serif; }
     background: #E76F51;
     color: #fff;
   }
-.submit-btn button { 
-  display: flex;
-  justify-content: center;
-  width: 80px; 
-  padding: 10px; 
-  margin: 8px 0;
-  cursor: pointer; 
-  background: #388388;
-  color: #F4A261; 
-  border-radius: 6px;
-  font-size: 16px; 
-  font-weight: bold; 
-  border: none;
-}
-
-.submit-btn:hover { 
-  background: #E76F51;
-  color: #fff;
-}
 
 /* about page styles */
 .about-title {
