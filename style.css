@@ -273,4 +273,14 @@ canvas {
     
 #result { font-weight: bold; font-size: 1.2em; margin-top: 20px; }
 
+/* footer styles */
 
+#footer{width:100%; text-align:center; 
+    background: #388388;
+    color: #F4A261; 
+    border-radius: 5px;
+    min-height:150px; 
+    position:relative;
+    z-index: 1}
+
+#clearfix {clear:both;}
