@@ -120,11 +120,11 @@ body { font-family: sans-serif; }
 }
 
 .submit-btn { 
-  display: block; 
-  width: 100px; 
+  display: flex; 
+  width: 80px; 
   padding: 10px; 
   margin: 8px 0; 
-  text-align: center; 
+  justify-content: center; 
   cursor: pointer; 
   background: #388388;
   color: #F4A261; 
