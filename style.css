@@ -127,7 +127,6 @@ body { font-family: sans-serif; }
   }
 
   .submit-buttons button {
-    justify-content: center;
     padding: 10px 18px;
     background: #388388;
     color: #F4A261;
