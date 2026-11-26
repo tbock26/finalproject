@@ -236,3 +236,17 @@ canvas {
     margin: 8px auto 0;
     font-size: 14px;
   }
+
+/* quiz styles */
+.quizbody 
+{ font-family: sans-serif; max-width: 500px; margin: 50px auto; 
+    background: #E9C46A;}
+  
+.option-btn { display: block; width: 100%; padding: 10px; margin: 8px 0; text-align: left; cursor: pointer; background: #388388;
+    color: #F4A261; border-radius: 6px;
+    font-size: 16px;}
+    
+.option-btn:hover { background: #E76F51;
+    color: #fff;}
+    
+#result { font-weight: bold; font-size: 1.2em; margin-top: 20px; }
