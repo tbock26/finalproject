@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="quizbody">
+
+  <div id="quiz-container">
+    <h2 class="header2" id="question">Question goes here</h2>
+    <div id="options"></div>
+  </div>
+  <div id="result"></div>
+
+  <script>
+    // 1. Store your questions and answers
+    const quizData = [
+      {
+        question: "Which era of art history comes first?",
+        options: ["Early Modern", "Ancient", "Medieval", "1800 - today"],
+        answer: "Ancient"
+      },
+      {
+        question: "What is a key element of Ancient art?",
+        options: ["Computer graphics", "Rudimentary materials", "Illuminated manuscripts"],
+        answer: "Rudimentary materials"
+      },
+      {
+        question: "When was the Medieval era of art?",
+        options: ["5th to 15th century", "1800 - today", "100 BCE"],
+        answer: "5th to 15th century"
+      }
+    ];
+
+    // 2. Track the current state
+    let currentQuestion = 0;
+    let score = 0;
+
+    // 3. Grab HTML elements
+    const questionEl = document.getElementById("question");
+    const optionsEl = document.getElementById("options");
+    const resultEl = document.getElementById("result");
+    const quizContainer = document.getElementById("quiz-container");
+
+    // 4. Function to load a question
+    function loadQuestion() {
+      // Clear previous options
+      optionsEl.innerHTML = "";
+      
+      // Get current question object
+      const currentQuiz = quizData[currentQuestion];
+      questionEl.innerText = currentQuiz.question;
+
+      // Create a button for each option
+      currentQuiz.options.forEach(option => {
+        const button = document.createElement("button");
+        button.innerText = option;
+        button.classList.add("option-btn");
+        
+        // Check answer when clicked
+        button.addEventListener("click", () => checkAnswer(option));
+        optionsEl.appendChild(button);
+      });
+    }
+
+    // 5. Function to check the answer and move forward
+    function checkAnswer(selectedOption) {
+      if (selectedOption === quizData[currentQuestion].answer) {
+        score++;
+      }
+
+      currentQuestion++;
+
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        showResults();
+      }
+    }
+
+    // 6. Function to display the final score
+    function showResults() {
+      quizContainer.style.display = "none";
+      resultEl.innerHTML = `<h2 class="header2">You scored ${score} out of ${quizData.length}! <a href="quiz.html">Play again</a>?</h2>`;
+    }
+
+    // Start the quiz
+    loadQuestion();
+  </script>
+
+</body>
+</html>
