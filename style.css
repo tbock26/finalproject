@@ -279,7 +279,7 @@ canvas {
     background: #388388;
     color: #F4A261; 
     border-radius: 5px;
-    min-height:150px; 
+    height:auto; 
     position:relative;
     z-index: 1}
 
