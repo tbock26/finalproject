@@ -1,5 +1,13 @@
 
 /* homepage styles */
+
+#header{width:100%;
+    text-align:center;
+    background: #E9C46A;
+    background: #388388;
+    position: fixed;
+    height:220px;}
+
 body {
   margin: 20px;
   background: #E9C46A;
