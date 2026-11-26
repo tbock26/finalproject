@@ -279,7 +279,8 @@ canvas {
     background: #388388;
     color: #F4A261; 
     border-radius: 5px;
-    height:auto; 
+    height: 40px; 
+    padding: 10px;
     position:relative;
     z-index: 1}
 
