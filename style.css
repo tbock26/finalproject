@@ -5,7 +5,8 @@
     text-align:center;
     background: #E9C46A;
     color: #388388;
-    position: sticky;}
+    position: sticky;
+    padding: 5px;}
 
 body {
   margin: 20px;
