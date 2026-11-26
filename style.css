@@ -4,9 +4,9 @@
 #header{width:100%;
     text-align:center;
     background: #E9C46A;
-    background: #388388;
-    position: fixed;
-    height:220px;}
+    color: #388388;
+    position: sticky;
+    height:160px;}
 
 body {
   margin: 20px;
