@@ -41,11 +41,13 @@
 	<div class="paint-clone">
 		<canvas id="canvas"></canvas>
 		<div class="paint-tools">
-			const colorPicker = document.getElementById('color-picker');
-			const brushSize = document.getElementById('brush-size');
-			const eraserBtn = document.getElementById('eraser-btn');
-			const clearBtn = document.getElementById('clear-btn');
-			const saveBtn = document.getElementById('save-btn');
+			<input type="range"
+				id="brush-size" min="1"
+				max="50" value="5">
+			<input type="color"
+				id="color-picker">
+			<button id="clear-canvas">Clear</button>
+			<button id="eraser-btn">Eraser</button>
 		</div>
 	</div>
 	<script >
@@ -57,7 +59,7 @@
 	            document.getElementById('brush-size');
         const colorPicker =
 	            document.getElementById('color-picker');
-		const 
+		const eraserBtn = document.getElementById('eraser-btn')
         const clearCanvas =
 	            document.getElementById('clear-canvas');
 
